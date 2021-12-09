@@ -1,10 +1,11 @@
 interface course {
   name: string;
-  educator?: string;
-  duration: number;
+  educator: string;
+  duration?: number; //Adicionar por opção 
 }
 class CreateCourseService {
-  execute({name, duration, educator}:course){
+  //Adicionar por default
+  execute({name, duration = 4, educator}:course){
     console.log(name, duration, educator);
   }
 }
